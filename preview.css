@@ -1,0 +1,42 @@
+.preview-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 18vw;
+    background: #ffffff0d;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #222224;
+    cursor: pointer;
+    font-size: 30px;
+    transition: transform 0.5s;
+}
+
+.preview-card.flipped {
+    transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.preview-card > div {
+    position: absolute;
+    transition: transform 0.2s;
+}
+
+.preview-question {
+    opacity: 1;
+    transform: rotate3d(0, 1, 0, 0deg);
+}
+    
+.preview-answer {
+    opacity: 0;
+    transform: rotate3d(0, 1, 0, 90deg);
+}
+
+.preview-card.flipped .preview-question {
+    transform: rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+}
+    
+.preview-card.flipped .preview-answer {
+    transform: rotate3d(0, 1, 0, 180deg);
+    opacity: 1;
+}

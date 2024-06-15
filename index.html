@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Flash Cards Maker </title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="add">
-        <button id="add-new"> Add a new question: </button>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flashcard App</title>
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="flashcard.css">
+        <link rel="stylesheet" href="preview.css">
+    </head>
+    <body>
+        <nav>
+            <menu>
+                <div id="" target="edit" class="active navbar-item">Edit</div>
+                <div id="render-preview" target="preview" class="navbar-item">Test</div>
+            </menu>
 
-    <div id="questions">
-    </div>
+            <div class="brand">
+                <img class="branding" src="./assets/images/logo.png">
+            </div>
+        </nav>
 
-    <a href="questions.html">
-        <button id="submit"> Submit questions: </button>
-    </a>
-    
-    <script src="index.js"></script>
-</body>
+        <main>
+            <section class="app-mode active" id="edit">
+
+                <div id="cards" class="card-grid">
+                    
+                    <div id="add-new" class="new-card">
+                        <span>Click to add</span>
+                        <span>&plus;</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="app-mode" id="preview">
+                <div id="preview-grid" class="card-grid"></div>
+            </section>
+        </main>
+
+        <script src="navbar.js"></script>
+        <script src="flashcards.js"></script>
+        <script src="preview.js"></script>
+        <script src="storage.js"></script>
+    </body>
 </html>
