@@ -22,3 +22,4 @@ btn.addEventListener("click", function() {
 
     questions.appendChild(el);
 });
+
